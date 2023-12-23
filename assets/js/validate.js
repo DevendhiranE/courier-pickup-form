@@ -1,5 +1,5 @@
-const formEl = document.querySelector("#courier-request-form");
-const validate = new window.JustValidate(formEl);
+const formEle = document.getElementById("courier-request-form");
+const validate = new window.JustValidate(formEle);
 validate.addField(
   "#name",
   [
@@ -63,3 +63,8 @@ validate.addField(
     errorLabelCssClass: ["mt-2", "text-sm"],
   }
 );
+formEle.addEventListener("submit", () => {
+  validate.onSuccess((e) => {
+    console.log("Success");
+  });
+});
