@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courier Pickup Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="bg-red-500">
+    <div class="bg-blue-300 max-w-xl mx-auto my-10 p-3 rounded">
+      <h2 class="text-lg font-semibold my-2">Request a Courier Pickup!</h2>
+      <form id="courier-request-form" action="#" method="post">
+        <div class="grid grid-cols-2 gap-x-3">
+          <div>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="input-form"
+              placeholder="Name"
+              autocomplete="off"
+            />
+          </div>
+
+          <div>
+            <input
+              type="number"
+              name="Mobile"
+              id="mobile-no"
+              class="input-form"
+              placeholder="Mobile Number"
+            />
+          </div>
+        </div>
+        <div>
+          <input
+            type="datetime-local"
+            name="date-time"
+            id="date-time"
+            class="input-form"
+          />
+        </div>
+
+        <div>
+          <textarea
+            name="text-area"
+            id="pickup-area"
+            cols="30"
+            rows="5"
+            class="input-form resize-none text-sm"
+            placeholder="Enter Your Pickup Address"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-500 px-2 py-3 w-full rounded text-white font-semibold text-md my-3"
+        >
+          Create Request
+        </button>
+      </form>
+    </div>
+    <!-- Validate Form -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
